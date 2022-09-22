@@ -37,6 +37,7 @@ public class MyDB {
 
         try {
             conn = DriverManager.getConnection(jdbcString, connectionProps);
+            statement = conn.createStatement();
         }
         catch(SQLException e) {
             System.out.println("Błąd podłączenia do bazy: " + jdbcString);
