@@ -44,7 +44,7 @@ public class MyDB {
             System.out.println("Komunikat błędu: " + e.getMessage());
             conn = null;
         }
-        System.out.println("Connected to database" + dbName);
+        System.out.println("Connected to database " + dbName);
     }
 
     public Connection getConnection() {
