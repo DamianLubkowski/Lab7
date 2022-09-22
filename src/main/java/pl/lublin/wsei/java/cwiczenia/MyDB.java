@@ -47,6 +47,16 @@ public class MyDB {
         System.out.println("Connected to database " + dbName);
     }
 
+    public void closeConnection() {
+        if (conn != null)
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                System.out.println("Błąd przy zamykaniu połączenia bazodanowego: " + e.getMessage());
+            }
+        conn = null;
+    }
+
     public Connection getConnection() {
         if (conn == null)
             connect();
